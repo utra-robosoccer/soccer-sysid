@@ -1,0 +1,15 @@
+# Dataset manifest — raw recordings are NOT committed to git.
+# Each entry records a dataset directory (rsync'd/backed up elsewhere) with enough
+# provenance to reproduce or audit a fit. Add one entry per recording session.
+#
+# Example:
+# - id: 2026-11-12_rs02_bench_a
+#   path: raw/sin_time_square/           # relative to data/
+#   motor_model: RS02
+#   motor_serial: "unknown"
+#   rig: bench pendulum, no load
+#   firmware_path: direct CH341 USB-CAN (no soccer-firmware in loop)
+#   trajectories: [sin_time_square, lift_and_drop, nothing]
+#   notes: first session after repo restructure
+#   sha256: {}                           # optional per-file checksums
+datasets: []

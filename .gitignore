@@ -1,0 +1,24 @@
+# Virtual environments
+.bam_env/
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Raw experiment data stays out of git — tracked via data/manifest.yaml instead.
+# (.gitkeep and manifest.yaml remain tracked.)
+data/raw/*
+!data/raw/.gitkeep
+
+# Generated plots / scratch output
+*.png
+!figures/**/*.png
+
+# Local tool state
+.claude/settings.local.json
+MUJOCO_LOG.TXT

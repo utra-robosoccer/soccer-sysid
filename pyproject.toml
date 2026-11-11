@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "soccer-sysid"
+version = "0.1.0"
+description = "Actuator system identification for the RoboSoccer humanoid: bench experiments, effect fitting (friction, latency, ...), MuJoCo modeling, and sim-vs-real validation"
+requires-python = ">=3.10"
+dependencies = [
+    "pyserial",
+    "click",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+sim = ["mujoco"]
+fit = ["scipy"]
+
+[project.scripts]
+rs02 = "soccer_sysid.cli:cli"
+
+[tool.setuptools.packages.find]
+include = ["soccer_sysid*"]
